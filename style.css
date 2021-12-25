@@ -120,24 +120,24 @@ header ul li{
     position: absolute;
 }
 .spinning img:nth-child(1){
-    top: 0;
-    left: 42%;
+    top: 29%;
+    left: 4%;
 }
 .spinning img:nth-child(2){
-    top: 25%;
-    right: 0;
+    top: 32%;
+    right: 3%;
 }
 .spinning img:nth-child(3){
-    top: 70%;
-    left: 70%;
+    top: 2%;
+    left: 41%;
 }
 .spinning img:nth-child(4){
-    top: 25%;
-    left: 0;
+    top: 69%;
+    left: 14%;
 }
 .spinning img:nth-child(5){
-    top: 70%;
-    left: 10%;
+    top: 72%;
+    left: 63%;
 }
 
 .wave{
@@ -381,6 +381,13 @@ header ul li{
         height: 300px;
         background: radial-gradient(520px, #8FD6E1, transparent 28%);
     }
+
+    .img{
+        width: 300px;
+        height: 300px;
+        background: radial-gradient(520px, #8FD6E1, transparent 28%);
+        left: -2%;
+    }
     
     .logo-img{
         width: 110px;
@@ -391,6 +398,27 @@ header ul li{
         width: 70px;
         height: 71px;
     }
+
+    .spinning img:nth-child(1){
+        top: 29%;
+        left: 4%;
+    }
+    .spinning img:nth-child(2){
+        top: 32%;
+        right: 3%;
+    }
+    .spinning img:nth-child(3){
+        top: 2%;
+        left: 39%;
+    }
+    .spinning img:nth-child(4){
+        top: 68%;
+        left: 16%;
+    }
+    .spinning img:nth-child(5){
+        top: 70%;
+        left: 60%;
+    } 
    
   }
 
@@ -411,5 +439,27 @@ header ul li{
         width: 60px;
         height: 61px;
     }
+
+    
    
+  }
+
+
+  @media (max-width:320px){
+    .img{
+        width: 200px;
+        height: 200px;
+        background: radial-gradient(520px, #8FD6E1, transparent 20%);
+    }
+
+    .spinning img{
+        width: 50px;
+        height: 51px;
+    }
+
+    .logo-img{
+        width: 70px;
+        height: 70px;
+    }
+
   }
