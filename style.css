@@ -32,17 +32,18 @@ header ul li{
     display: inline-block;
     margin: 0 15px;
 }
- a{
+
+header a, .text  a{
     color: white;
     text-transform: uppercase;
     text-decoration: none;
     letter-spacing: 1px;
     transition: all ease 0.5s;
 }
- a:hover{
+ header a:hover{
     color: #1597BB;
 }
- a.btn{
+a.btn{
     display: inline-block;
     width: 180px;
     height: 60px;
@@ -54,7 +55,7 @@ header ul li{
     border-radius: 50px;
     transition: all ease 0.5s;
 }
- a.btn:hover{
+a.btn:hover{
     background-color: #467a88;
 }
 
@@ -235,6 +236,45 @@ header ul li{
     margin:50px 0px 30px 0px;
 }
 
+
+footer {
+    width: 100%;
+    height: auto;
+    background-color:#1597BB;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color:#063755;
+}
+
+footer  ul{
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 50px 0;
+    font-weight: 600;
+}
+
+footer ul li {
+    list-style: none;
+    text-align: center;
+    width: 200px;
+}
+
+footer a {
+    text-decoration: none;
+    color: #063755;
+}
+
+footer i {
+    font-size: 23px;
+}
+
+footer p {
+    font-size: 16px;
+}
+
 @media (max-width:1200px) {
 
     header{
@@ -297,7 +337,7 @@ header ul li{
       display: block;
     }
 
-    ul{
+    header > nav > ul{
       position:fixed;
       overflow-y:scroll;
       overflow-x:hidden;
@@ -328,6 +368,18 @@ header ul li{
 
     .section-1 h4{
         font-size: 30px;
+    }
+
+    footer  ul{
+        flex-direction: column;
+        margin-bottom: 20px;
+    }
+    
+    footer ul li {
+        list-style: none;
+        text-align: center;
+        width: auto;
+        padding-bottom: 30px;
     }
 
   }

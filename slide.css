@@ -1,4 +1,4 @@
-.section-1 i {
+.section-1 > i {
 	position: relative;
 	display: block;
 	width:75%;
@@ -9,7 +9,7 @@
     margin-bottom: 250px;
 }
 
-.section-1 iframe {
+.section-1 > iframe {
 	width:75%;
 	height: 500px;
 	border: none;
@@ -17,7 +17,7 @@
 	border-radius: 5px;
 }
 
-.section-1 i:before, .section-1 i:after { /* flechitas */
+.section-1 > i:before, .section-1 > i:after { /* flechitas */
 	content: '❮';
 	position: absolute;
 	top: 50%;
@@ -34,7 +34,7 @@
 	pointer-events: none;
 }
 
-.section-1 i:after {
+.section-1 > i:after {
 	content: '❯';
 	left: auto;
 	right: 1rem;
@@ -109,7 +109,7 @@
 @media (max-width: 850px){
 
     
-.section-1 i {
+.section-1 > i {
 	width:75%;
 	height: 400px;
     margin-bottom: 100px;
@@ -127,7 +127,7 @@
 @media (max-width: 650px){
 
     
-    .section-1 i {
+    .section-1 > i {
         width:85%;
         height: 350px;
         margin-bottom: 100px;
