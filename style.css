@@ -108,17 +108,35 @@ a.btn:hover{
     transform: translate(-50%, -50%);
     border-radius: 50%;
 }
+
+
 .spinning{
     height: 100%;
-    animation: rotation 60s linear infinite;
 }
+
+ .animation{
+    animation: rotation 1s ease-in-out 1;   
+    animation-delay: 0s
+}
+
+.animation1 {
+    animation: rotation 45s linear infinite;
+    animation-delay: 1s
+}
+
 @keyframes rotation {
     100%{
         transform: rotate(360deg);
     }
 }
+
 .spinning img{
     position: absolute;
+    transition: transform .2s; /* Animation */
+}
+
+.spinning img:hover{
+    transform: scale(1.1);
 }
 .spinning img:nth-child(1){
     top: 29%;

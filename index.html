@@ -17,6 +17,7 @@ For Support : https://www.patreon.com/helplearndesign
     <script src="https://kit.fontawesome.com/c8a0597b0e.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="slide.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 <body>
 
@@ -43,11 +44,11 @@ For Support : https://www.patreon.com/helplearndesign
 
     <div class="content">
         <div class="text">
-            <p>Libero sunt aut excepturi natus leo etiam <span>corporis lobortis</span> quas nunc semper eius ullam ullam velit voluptas.</p>
-            <a href="#" class="btn" style="margin-top: 50px;">Get Started</a>
+            <p data-aos="fade-right">Libero sunt aut excepturi natus leo etiam <span>corporis lobortis</span> quas nunc semper eius ullam ullam velit voluptas.</p>
+            <a data-aos="fade-right" data-aos-delay="150" href="#" class="btn" style="margin-top: 50px;">Get Started</a>
         </div>
         <div class="img">
-            <div class="spinning">
+            <div class="spinning" id="spinning">
                 <img src="images/platillo1.png" alt="">
                 <img src="images/platillo2.png" alt="">
                 <img src="images/platillo3.png" alt="">
@@ -63,8 +64,8 @@ For Support : https://www.patreon.com/helplearndesign
 </div>
 
 <div class="section-1">
-    <h4>GALLERY</h4>
-    <i>
+    <h4 data-aos="fade-right">GALLERY</h4>
+    <i data-aos="fade-right" data-aos-delay="150">
         <input checked type="radio" name="s" style="background-image: url('https://scontent.fsal3-1.fna.fbcdn.net/v/t39.30808-6/241728454_381969676674131_7201065214740384333_n.jpg?_nc_cat=106&ccb=1-5&_nc_sid=730e14&_nc_ohc=FdqGj7x_EvUAX90qDpY&tn=iGoaokOyIZFdmhZg&_nc_ht=scontent.fsal3-1.fna&oh=00_AT_1Hf1-hpAMtq-vcPhKO6r-xE7hoqe-cv-ncRSTqFCO3w&oe=61CB8D3C');">
         <input type="radio" name="s" style="background-image: url('https://scontent.fsal3-1.fna.fbcdn.net/v/t39.30808-6/243154750_393297878874644_2675856412691330365_n.jpg?_nc_cat=109&ccb=1-5&_nc_sid=730e14&_nc_ohc=YGq4ZXMNXboAX9Hw8wu&tn=iGoaokOyIZFdmhZg&_nc_ht=scontent.fsal3-1.fna&oh=00_AT8fa1AuaLUzVti-8KM2LLH7W_yvG82E19xQZI_DrJScEg&oe=61CB8675');">
         <input type="radio" name="s" style="background-image: url('https://scontent.fsal3-1.fna.fbcdn.net/v/t39.30808-6/245373503_404702927734139_7198418903382690812_n.jpg?_nc_cat=105&ccb=1-5&_nc_sid=730e14&_nc_ohc=87rRJ81XNv8AX-sNxNi&_nc_ht=scontent.fsal3-1.fna&oh=00_AT-B1JngXmhphxlFvCRK-Kx_GndzS9KbStSEg3LV2h3ZlA&oe=61CA4AEC');">
@@ -82,11 +83,8 @@ For Support : https://www.patreon.com/helplearndesign
 </div>
 
 <div class="section-1 section-2">
-    <h4>LOCATION</h4>
-
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6914.925257511977!2d-93.04161579663355!3d44.89879557579467!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87f7d5ea7f7d7433%3A0x8e8980b5fe4cedf9!2sLas%20islas!5e0!3m2!1ses-419!2ssv!4v1640381018964!5m2!1ses-419!2ssv" allowfullscreen="" loading="lazy"></iframe>
-
-
+    <h4 data-aos="fade-left">LOCATION</h4>
+    <iframe  data-aos="fade-left" data-aos-delay="150" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6914.925257511977!2d-93.04161579663355!3d44.89879557579467!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87f7d5ea7f7d7433%3A0x8e8980b5fe4cedf9!2sLas%20islas!5e0!3m2!1ses-419!2ssv!4v1640381018964!5m2!1ses-419!2ssv" allowfullscreen="" loading="lazy"></iframe>
     <div class="wave">
         <img src="images/wave.svg" alt="">
     </div>
@@ -94,7 +92,6 @@ For Support : https://www.patreon.com/helplearndesign
 </div>
 
 <footer class="section-1">
-
     <ul style="padding:0;">
         <li>
             <i class="fas fa-phone-alt"></i>
@@ -117,12 +114,21 @@ For Support : https://www.patreon.com/helplearndesign
             <p>lasislas.stp@gmail.com</p>
         </li>
     </ul>
-
-
 </footer>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
 
+    window.onload = function() {
+        let s = document.getElementById("spinning")
+        s.classList.add(`animation`)
 
+        setTimeout(function() {
+            s.classList.remove(`animation`)
+            s.classList.add(`animation1`)
+        },1000)
 
-
+        AOS.init()
+    }
+</script>
 </body>
 </html>
