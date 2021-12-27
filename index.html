@@ -133,7 +133,7 @@ For Support : https://www.patreon.com/helplearndesign
             scrollElements.forEach((el) => {
                 let position = el.getBoundingClientRect().top
                 /* console.log(position) */
-                let screenPosition = window.innerHeight-(window.innerHeight*0.5)
+                let screenPosition = window.innerHeight-(window.innerHeight*0.4)
 
                 if(position < screenPosition){
                     el.classList.add(`scrolled`)
