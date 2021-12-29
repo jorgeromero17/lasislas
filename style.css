@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }        
 body{
-    font-family: Space Grotesk;
+    font-family: Tahoma, Geneva, Verdana, sans-serif;
     background-color: #063755;
     overflow-x: hidden;
 }
@@ -108,7 +108,6 @@ a.btn:hover{
     transform: translate(-50%, -50%);
     border-radius: 50%;
 }
-
 
 .spinning{
     height: 100%;
@@ -228,6 +227,34 @@ a.btn:hover{
     animation: waveOne 120s linear infinite; 
 }
 
+.wave2:before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(images/wave2.svg) repeat-x;
+    background-size: cover;
+    background-position: -1000px 0;
+    opacity: .3;
+    animation: waveOne 60s linear infinite; 
+}
+
+.wave2:after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(images/wave2.svg) repeat-x;
+    background-size: cover;
+    background-position: 2732px 0;
+    opacity: .4;
+    animation: waveOne 120s linear infinite; 
+}
+
 .logo img{
     height: 60px;
 }
@@ -245,6 +272,10 @@ a.btn:hover{
 
 .section-2 {
     background-color:#063755;
+}
+
+.section-3 {
+    background-color: white;
 }
 
 .section-1 h4{
@@ -303,11 +334,11 @@ footer p {
 }
 
 .scrolled.slide-left {
-animation: slide-in-left 1s ease-in-out both;
+animation: slide-in-left 0.5s ease-in-out both;
 }
 
 .scrolled.slide-right {
-animation: slide-in-right 1s ease-in-out both;
+animation: slide-in-right 0.7s ease-in-out both;
 }
 
 @keyframes slide-in-left {
@@ -336,6 +367,128 @@ animation: slide-in-right 1s ease-in-out both;
     }
   }  
 
+.mosaic{
+    width:75%;
+	height: 450px;
+	margin-bottom: 250px;
+    display: grid;
+    grid-gap: 25px;
+    grid-template-columns: repeat(2,auto);
+    grid-template-rows: repeat(2,auto);
+    grid-template-areas: "child1 child2 child3"
+                         "child1 child4 child4";
+  }
+
+.mosaic a {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    background-color: white;
+    text-decoration: none;
+    -webkit-box-shadow: 3px 3px 10px 0px rgba(6,55,85,0.5); 
+    box-shadow: 3px 3px 10px 0px rgba(6,55,85,0.5);
+    background-repeat: no-repeat;
+	background-size:cover;
+	background-position: center;
+}
+
+.mosaic > a:hover {
+    transform: scale(1.01);
+    transition: all ease 0.3s;
+}
+
+.mosaic :nth-child(1){
+    grid-area: child1;
+}
+
+.mosaic :nth-child(2){
+    grid-area: child2;
+}
+
+.mosaic :nth-child(3){
+    grid-area: child3;
+}
+
+.mosaic :nth-child(4){
+    grid-area: child4;
+}
+
+.card-title {
+    display: inline-block;
+    font-weight: 600;
+    font-size: 22px;
+    padding: 5px 15px;
+    width: auto;
+    margin-top: 15px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    color:#063755;
+    background-color: rgba(255, 255, 255, 0.80);
+}
+
+.card-description {
+    color: rgb(109, 109, 109);
+    font-size: 16px;
+    width: 100%;
+}
+
+.carousel{
+    width:80%;
+	height: 450px;
+	margin-bottom: 150px;
+    display: grid;
+    grid-gap: 25px;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(1,auto);
+    grid-template-areas: "item1 item2 item3 item4";
+  }
+
+.carousel :nth-child(1){
+      grid-area: item1;
+}
+
+.carousel :nth-child(2){
+    grid-area: item2;
+}
+
+.carousel :nth-child(3){
+    grid-area: item3;
+}
+
+.carousel :nth-child(4){
+    grid-area: item4;
+}
+
+.carousel-item {
+    width: 100%;
+    height: 350px;
+    border-radius: 10px;
+    margin: 0px 20px;
+    -webkit-box-shadow: 5px 5px 15px 0px rgba(6,55,85,0.25); 
+    box-shadow: 5px 5px 15px 0px rgba(6, 55, 85, 0.25);
+}
+
+.item-image {
+    width: 100%;
+    height: 250px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-repeat: no-repeat;
+	background-size:contain;
+	background-position: center;
+}
+
+.item-title {
+    display: inline-block;
+    font-weight: 600;
+    font-size: 20px;
+    padding: 5px 15px;
+    width: 100%;
+    margin-top: 15px;
+    color:#063755;
+}
+
+
 
 @media (max-width:1200px) {
 
@@ -358,6 +511,28 @@ animation: slide-in-right 1s ease-in-out both;
     
     }
 
+}
+
+@media (max-width: 950px){
+
+    .mosaic{
+        margin-bottom: 150px;
+        grid-template-columns: repeat(2,auto);
+        grid-template-rows: repeat(1,auto);
+        grid-template-areas: "child1 child2"
+                             "child3 child4";
+    }
+
+    .carousel{
+        width:70%;
+        height: auto;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(1,auto);
+        grid-template-areas: "item1 item2"
+                             "item3 item4";
+      }
+
+    
 }
 
 @media (max-width: 850px){
@@ -446,6 +621,53 @@ animation: slide-in-right 1s ease-in-out both;
 
   }
 
+  @media (max-width: 700px){
+
+    .mosaic{
+        width: 60%;
+        height: auto;
+        margin-bottom: 150px;
+        grid-template-columns: repeat(1,auto);
+        grid-template-rows: repeat(1,auto);
+        grid-template-areas: "child1"
+                             "child2"
+                             "child3"
+                             "child4";
+    }
+
+    .mosaic a {
+        width: 100%;
+        height: 250px;
+    }
+
+    .card-title {
+        font-size: 18px;
+    }
+
+    .carousel{
+        width:60%;
+        height: auto;
+        margin-bottom: 150px;
+        grid-template-columns: repeat(1,1fr);
+        grid-template-rows: repeat(1,auto);
+        grid-template-areas: "item1"
+                             "item2"
+                             "item3"
+                             "item4";
+    }
+
+    .carousel-item {
+        margin: 0 0;
+    }
+
+
+    .item-title {
+        font-size: 18px;
+    }
+
+
+}
+
   @media (max-width: 550px){
     
     header{
@@ -483,7 +705,27 @@ animation: slide-in-right 1s ease-in-out both;
     .section-1 h4{
         font-size: 25px;
     }
+
+    .mosaic{
+        width: 70%;
+    }
+
+    .carousel{
+        width: 70%;
+    }
     
+    .mosaic a {
+        width: 100%;
+        height: 250px;
+    }
+
+    .carousel-item {
+        height: 300px;
+    }
+
+    .item-image{
+        height: 200px;
+    }
 
   }
 
@@ -533,6 +775,11 @@ animation: slide-in-right 1s ease-in-out both;
         top: 70%;
         left: 60%;
     } 
+
+    .mosaic a {
+        width: 100%;
+        height: 200px;
+    }
    
   }
 
